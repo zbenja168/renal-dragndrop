@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RenalStudy &ndash; Drag &amp; Drop Games</title>
+<style>
+  :root{--bg:#0a0805;--surface:#14110b;--surface2:#1d1812;--text:#f1f5f9;--muted:#94a3b8;--border:rgba(255,255,255,0.07);}
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{background:var(--bg);color:var(--text);font-family:'Segoe UI',system-ui,sans-serif;min-height:100vh;}
+
+  header{background:linear-gradient(160deg,#1a1305 0%,#2a1f08 50%,#0a0805 100%);border-bottom:1px solid var(--border);padding:44px 24px 36px;text-align:center;position:relative;overflow:hidden;}
+  header::after{content:'\1FAD8';position:absolute;font-size:360px;opacity:.025;top:50%;left:50%;transform:translate(-50%,-50%);pointer-events:none;}
+  header h1{font-size:2.4rem;font-weight:800;letter-spacing:-0.5px;background:linear-gradient(135deg,#f8fafc 30%,#f59e0b);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:6px;position:relative;}
+  header p{color:var(--muted);font-size:.9rem;position:relative;}
+  .pills{display:flex;gap:10px;justify-content:center;margin-top:18px;flex-wrap:wrap;position:relative;}
+  .pill{background:rgba(255,255,255,.05);border:1px solid var(--border);border-radius:20px;padding:5px 14px;font-size:.78rem;color:var(--muted);}
+  .pill b{color:#f59e0b;}
+
+  .search-wrap{max-width:460px;margin:22px auto 0;position:relative;}
+  .search-wrap input{width:100%;background:var(--surface);border:1px solid var(--border);border-radius:24px;padding:10px 44px 10px 18px;color:var(--text);font-size:.85rem;outline:none;transition:.2s;}
+  .search-wrap input:focus{border-color:#f59e0b;box-shadow:0 0 0 3px rgba(245, 158, 11, .18);}
+  .search-wrap input::placeholder{color:var(--muted);}
+  .search-ico{position:absolute;right:15px;top:50%;transform:translateY(-50%);color:var(--muted);font-size:.85rem;pointer-events:none;}
+
+  main{max-width:1380px;margin:0 auto;padding:32px 16px 56px;}
+  .no-results{text-align:center;color:var(--muted);padding:60px 20px;font-size:.9rem;display:none;}
+
+  .section{margin-bottom:32px;}
+  .section-head{display:flex;align-items:center;gap:10px;margin-bottom:12px;padding-bottom:10px;border-bottom:1px solid var(--border);}
+  .section-icon{font-size:1.2rem;line-height:1;}
+  .section-title{font-size:.95rem;font-weight:700;color:var(--text);}
+  .section-badge{margin-left:auto;background:var(--surface2);border-radius:10px;padding:2px 8px;font-size:.68rem;color:var(--muted);}
+
+  .cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(195px,1fr));gap:7px;}
+  a.card{background:var(--surface);border:1px solid var(--border);border-radius:9px;padding:11px 12px;text-decoration:none;color:var(--text);display:flex;align-items:flex-start;gap:9px;transition:.15s;}
+  a.card:hover{border-color:var(--c,#f59e0b);background:var(--surface2);transform:translateY(-2px);box-shadow:0 6px 24px rgba(0,0,0,.5);}
+  .num{flex-shrink:0;background:var(--c,#f59e0b);color:#fff;border-radius:5px;padding:2px 5px;font-size:.6rem;font-weight:800;margin-top:1px;opacity:.9;letter-spacing:.3px;}
+  .ctitle{font-size:.75rem;line-height:1.45;color:var(--text);}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>RenalStudy</h1>
+  <p>Drag &amp; Drop Study Games &nbsp;&middot;&nbsp; Renal &amp; Urinary Medicine</p>
+  <div class="pills">
+    <span class="pill"><b>67</b> games</span>
+    <span class="pill"><b>21</b> source bricks</span>
+    <span class="pill"><b>21</b> sections</span>
+  </div>
+  <div class="search-wrap">
+    <input type="text" id="search" placeholder="Search by topic or number\u2026" autocomplete="off">
+    <span class="search-ico">&#x2315;</span>
+  </div>
+</header>
+
+<main>
+<div class="no-results" id="noResults">No games match your search.</div>
+
+<section class="section" data-section>
+  <div class="section-head">
+    <span class="section-icon">🫘</span>
+    <span class="section-title">Anatomy of the Urinary System</span>
+    <span class="section-badge">4 games</span>
+  </div>
+  <div class="cards">
+    <a class="card" href="renal_01_urinary_organs_anatomy.html" style="--c:#f59e0b"><span class="num">01</span><span class="ctitle">Urinary System Organs</span></a>
+    <a class="card" href="renal_02_kidney_internal_anatomy.html" style="--c:#f59e0b"><span class="num">02</span><span class="ctitle">Kidney Internal Anatomy</span></a>
+    <a class="card" href="renal_03_vascular_supply_urinary.html" style="--c:#f59e0b"><span class="num">03</span><span class="ctitle">Urinary Vascular Supply</span></a>
+    <a class="card" href="renal_04_innervation_lymphatic_drainage.html" style="--c:#f59e0b"><span class="num">04</span><span class="ctitle">Innervation and Lymphatics</span></a>
+  </div>
+</section>
+
+<section class="section" data-section>
+  <div class="section-head">
+    <span class="section-icon">💧</span>
+    <span class="section-title">Development of the Urinary System</span>
+    <span class="section-badge">3 games</span>
+  </div>
+  <div class="cards">
+    <a class="card" href="renal_05_germ_layers_and_mesoderm.html" style="--c:#10b981"><span class="num">05</span><span class="ctitle">Germ Layers and Mesoderm Components</span></a>
+    <a class="card" href="renal_06_progenitor_kidneys.html" style="--c:#10b981"><span class="num">06</span><span class="ctitle">Three Progenitor Kidneys</span></a>
+    <a class="card" href="renal_07_bladder_urethra_development.html" style="--c:#10b981"><span class="num">07</span><span class="ctitle">Bladder, Urethra, and Cloacal Derivatives</span></a>
+  </div>
+</section>
+
+<section class="section" data-section>
+  <div class="section-head">
+    <span class="section-icon">🧬</span>
+    <span class="section-title">Congenital Disorders of the Kidney</span>
+    <span class="section-badge">3 games</span>
+  </div>
+  <div class="cards">
+    <a class="card" href="renal_08_anomaly_definitions_and_embryology.html" style="--c:#8b5cf6"><span class="num">08</span><span class="ctitle">Kidney Anomalies: Definition &amp; Embryology</span></a>
+    <a class="card" href="renal_09_anatomic_consequences_and_complications.html" style="--c:#8b5cf6"><span class="num">09</span><span class="ctitle">Anatomic Consequences &amp; Complications</span></a>
+    <a class="card" href="renal_10_potter_sequence_features.html" style="--c:#8b5cf6"><span class="num">10</span><span class="ctitle">Potter Sequence Features</span></a>
+  </div>
+</section>
+
+<section class="section" data-section>
+  <div class="section-head">
+    <span class="section-icon">⚗️</span>
+    <span class="section-title">Histology of Renal Corpuscle and Tubular System</span>
+    <span class="section-badge">3 games</span>
+  </div>
+  <div class="cards">
+    <a class="card" href="renal_11_renal_corpuscle_components.html" style="--c:#06b6d4"><span class="num">11</span><span class="ctitle">Renal Corpuscle Components</span></a>
+    <a class="card" href="renal_12_glomerular_filtration_barrier.html" style="--c:#06b6d4"><span class="num">12</span><span class="ctitle">Glomerular Filtration Barrier Layers</span></a>
+    <a class="card" href="renal_13_renal_tubular_system.html" style="--c:#06b6d4"><span class="num">13</span><span class="ctitle">Renal Tubular Segments</span></a>
+  </div>
+</section>
+
+<section class="section" data-section>
+  <div class="section-head">
+    <span class="section-icon">🔬</span>
+    <span class="section-title">Glomerular Function</span>
+    <span class="section-badge">3 games</span>
+  </div>
+  <div class="cards">
+    <a class="card" href="renal_14_size_charge_selectivity.html" style="--c:#ec4899"><span class="num">14</span><span class="ctitle">Size and Charge Selectivity</span></a>
+    <a class="card" href="renal_15_starling_forces_nfp.html" style="--c:#ec4899"><span class="num">15</span><span class="ctitle">Starling Forces and Net Filtration Pressure</span></a>
+    <a class="card" href="renal_16_barrier_injury_patterns.html" style="--c:#ec4899"><span class="num">16</span><span class="ctitle">Filtration Barrier Injury Patterns</span></a>
+  </div>
+</section>
+
+<section class="section" data-section>
+  <div class="section-head">
+    <span class="section-icon">🧪</span>
+    <span class="section-title">Glomerular Filtration Rate (GFR)</span>
+    <span class="section-badge">3 games</span>
+  </div>
+  <div class="cards">
+    <a class="card" href="renal_17_gfr_determinants.html" style="--c:#84cc16"><span class="num">17</span><span class="ctitle">GFR Determinants &amp; Filtration Fraction</span></a>
+    <a class="card" href="renal_18_filtration_markers.html" style="--c:#84cc16"><span class="num">18</span><span class="ctitle">Filtration Markers Comparison</span></a>
+    <a class="card" href="renal_19_ckd_staging_consequences.html" style="--c:#84cc16"><span class="num">19</span><span class="ctitle">KDIGO GFR Staging &amp; Consequences</span></a>
+  </div>
+</section>
+
+<section class="section" data-section>
+  <div class="section-head">
+    <span class="section-icon">💊</span>
+    <span class="section-title">Renal Clearance</span>
+    <span class="section-badge">4 games</span>
+  </div>
+  <div class="cards">
+    <a class="card" href="renal_20_renal_handling_classification.html" style="--c:#f97316"><span class="num">20</span><span class="ctitle">Classifying Renal Handling</span></a>
+    <a class="card" href="renal_21_clearance_markers.html" style="--c:#f97316"><span class="num">21</span><span class="ctitle">Clearance Markers for GFR and RPF</span></a>
+    <a class="card" href="renal_22_filtration_fraction_conditions.html" style="--c:#f97316"><span class="num">22</span><span class="ctitle">Filtration Fraction in Disease</span></a>
+    <a class="card" href="renal_23_tubular_transport_drugs.html" style="--c:#f97316"><span class="num">23</span><span class="ctitle">Tubular Transport and Drug Clearance</span></a>
+  </div>
+</section>
+
+<section class="section" data-section>
+  <div class="section-head">
+    <span class="section-icon">🩺</span>
+    <span class="section-title">Regulation of Renal Blood Flow</span>
+    <span class="section-badge">4 games</span>
+  </div>
+  <div class="cards">
+    <a class="card" href="renal_24_renal_vascular_segments.html" style="--c:#3b82f6"><span class="num">24</span><span class="ctitle">Renal Vascular Segment Roles</span></a>
+    <a class="card" href="renal_25_autoregulation_mechanisms.html" style="--c:#3b82f6"><span class="num">25</span><span class="ctitle">Autoregulation: Myogenic vs TGF</span></a>
+    <a class="card" href="renal_26_vasoactive_molecules.html" style="--c:#3b82f6"><span class="num">26</span><span class="ctitle">Vasoactive Molecules on Renal Tone</span></a>
+    <a class="card" href="renal_27_arteriolar_tone_effects.html" style="--c:#3b82f6"><span class="num">27</span><span class="ctitle">Arteriolar Tone Effects on RBF, GFR, FF</span></a>
+  </div>
+</section>
+
+<section class="section" data-section>
+  <div class="section-head">
+    <span class="section-icon">🫘</span>
+    <span class="section-title">Nephron Segmental Physiology</span>
+    <span class="section-badge">3 games</span>
+  </div>
+  <div class="cards">
+    <a class="card" href="renal_28_nephron_segment_functions.html" style="--c:#f59e0b"><span class="num">28</span><span class="ctitle">Nephron Segment Functions</span></a>
+    <a class="card" href="renal_29_permeability_and_osmolality.html" style="--c:#f59e0b"><span class="num">29</span><span class="ctitle">Permeability and Tubular Osmolality</span></a>
+    <a class="card" href="renal_30_transport_maximum_and_splay.html" style="--c:#f59e0b"><span class="num">30</span><span class="ctitle">Transport Maximum and Splay</span></a>
+  </div>
+</section>
+
+<section class="section" data-section>
+  <div class="section-head">
+    <span class="section-icon">💧</span>
+    <span class="section-title">Sodium Homeostasis</span>
+    <span class="section-badge">3 games</span>
+  </div>
+  <div class="cards">
+    <a class="card" href="renal_31_nephron_sodium_handling.html" style="--c:#10b981"><span class="num">31</span><span class="ctitle">Nephron Segments and Sodium Reabsorption</span></a>
+    <a class="card" href="renal_32_sodium_regulators.html" style="--c:#10b981"><span class="num">32</span><span class="ctitle">Hormonal and Neural Sodium Regulators</span></a>
+    <a class="card" href="renal_33_intrarenal_autoregulation.html" style="--c:#10b981"><span class="num">33</span><span class="ctitle">Intrarenal Autoregulation Mechanisms</span></a>
+  </div>
+</section>
+
+<section class="section" data-section>
+  <div class="section-head">
+    <span class="section-icon">🧬</span>
+    <span class="section-title">Potassium Homeostasis</span>
+    <span class="section-badge">3 games</span>
+  </div>
+  <div class="cards">
+    <a class="card" href="renal_34_k_shift_factors.html" style="--c:#8b5cf6"><span class="num">34</span><span class="ctitle">Factors Shifting Potassium Across Cells</span></a>
+    <a class="card" href="renal_35_nephron_k_handling.html" style="--c:#8b5cf6"><span class="num">35</span><span class="ctitle">Potassium Handling Along the Nephron</span></a>
+    <a class="card" href="renal_36_distal_k_secretion_regulators.html" style="--c:#8b5cf6"><span class="num">36</span><span class="ctitle">Regulators of Distal K+ Secretion</span></a>
+  </div>
+</section>
+
+<section class="section" data-section>
+  <div class="section-head">
+    <span class="section-icon">⚗️</span>
+    <span class="section-title">Loop Diuretics</span>
+    <span class="section-badge">3 games</span>
+  </div>
+  <div class="cards">
+    <a class="card" href="renal_37_loop_diuretic_drugs.html" style="--c:#06b6d4"><span class="num">37</span><span class="ctitle">Loop Diuretic Drugs</span></a>
+    <a class="card" href="renal_38_loop_diuretic_indications.html" style="--c:#06b6d4"><span class="num">38</span><span class="ctitle">Clinical Indications</span></a>
+    <a class="card" href="renal_39_loop_adverse_effects.html" style="--c:#06b6d4"><span class="num">39</span><span class="ctitle">Adverse Effects and Mechanisms</span></a>
+  </div>
+</section>
+
+<section class="section" data-section>
+  <div class="section-head">
+    <span class="section-icon">🔬</span>
+    <span class="section-title">Thiazide Diuretics</span>
+    <span class="section-badge">3 games</span>
+  </div>
+  <div class="cards">
+    <a class="card" href="renal_40_thiazide_indications.html" style="--c:#ec4899"><span class="num">40</span><span class="ctitle">Thiazide Clinical Indications</span></a>
+    <a class="card" href="renal_41_thiazide_mechanism.html" style="--c:#ec4899"><span class="num">41</span><span class="ctitle">Thiazide Mechanism of Action</span></a>
+    <a class="card" href="renal_42_thiazide_adverse.html" style="--c:#ec4899"><span class="num">42</span><span class="ctitle">Adverse Effects and Cautions</span></a>
+  </div>
+</section>
+
+<section class="section" data-section>
+  <div class="section-head">
+    <span class="section-icon">🧪</span>
+    <span class="section-title">Osmotic Diuretics</span>
+    <span class="section-badge">3 games</span>
+  </div>
+  <div class="cards">
+    <a class="card" href="renal_43_osmotic_agents_overview.html" style="--c:#84cc16"><span class="num">43</span><span class="ctitle">Osmotic Agents: Identity &amp; Action</span></a>
+    <a class="card" href="renal_44_mannitol_mechanism_sites.html" style="--c:#84cc16"><span class="num">44</span><span class="ctitle">Mannitol: Mechanism by Site</span></a>
+    <a class="card" href="renal_45_adverse_effects_contraindications.html" style="--c:#84cc16"><span class="num">45</span><span class="ctitle">Adverse Effects &amp; Contraindications</span></a>
+  </div>
+</section>
+
+<section class="section" data-section>
+  <div class="section-head">
+    <span class="section-icon">💊</span>
+    <span class="section-title">Potassium-Sparing Diuretics</span>
+    <span class="section-badge">3 games</span>
+  </div>
+  <div class="cards">
+    <a class="card" href="renal_46_drug_class_comparison.html" style="--c:#f97316"><span class="num">46</span><span class="ctitle">Aldosterone Antagonists vs ENaC Blockers</span></a>
+    <a class="card" href="renal_47_clinical_indications.html" style="--c:#f97316"><span class="num">47</span><span class="ctitle">Clinical Indications</span></a>
+    <a class="card" href="renal_48_adverse_effects_interactions.html" style="--c:#f97316"><span class="num">48</span><span class="ctitle">Adverse Effects and Drug Interactions</span></a>
+  </div>
+</section>
+
+<section class="section" data-section>
+  <div class="section-head">
+    <span class="section-icon">🩺</span>
+    <span class="section-title">Body Fluids and Compartments</span>
+    <span class="section-badge">3 games</span>
+  </div>
+  <div class="cards">
+    <a class="card" href="renal_49_osmolality_vs_tonicity.html" style="--c:#3b82f6"><span class="num">49</span><span class="ctitle">Osmolality vs Tonicity</span></a>
+    <a class="card" href="renal_50_tonic_fluid_changes.html" style="--c:#3b82f6"><span class="num">50</span><span class="ctitle">Tonic Fluid Changes and Compartments</span></a>
+    <a class="card" href="renal_51_iv_fluid_selection.html" style="--c:#3b82f6"><span class="num">51</span><span class="ctitle">IV Fluid Selection</span></a>
+  </div>
+</section>
+
+<section class="section" data-section>
+  <div class="section-head">
+    <span class="section-icon">🫘</span>
+    <span class="section-title">Water Regulation</span>
+    <span class="section-badge">4 games</span>
+  </div>
+  <div class="cards">
+    <a class="card" href="renal_52_nephron_segments_water.html" style="--c:#f59e0b"><span class="num">52</span><span class="ctitle">Nephron Segments and Water Handling</span></a>
+    <a class="card" href="renal_53_water_balance_disorders.html" style="--c:#f59e0b"><span class="num">53</span><span class="ctitle">Clinical Disorders of Water Balance</span></a>
+    <a class="card" href="renal_54_thirst_adh_triggers.html" style="--c:#f59e0b"><span class="num">54</span><span class="ctitle">Triggers of Thirst and ADH Release</span></a>
+    <a class="card" href="renal_55_gradient_disruptors.html" style="--c:#f59e0b"><span class="num">55</span><span class="ctitle">Conditions Disrupting the Medullary Gradient</span></a>
+  </div>
+</section>
+
+<section class="section" data-section>
+  <div class="section-head">
+    <span class="section-icon">💧</span>
+    <span class="section-title">Hyponatremia</span>
+    <span class="section-badge">3 games</span>
+  </div>
+  <div class="cards">
+    <a class="card" href="renal_56_hyponatremia_types_by_tonicity.html" style="--c:#10b981"><span class="num">56</span><span class="ctitle">Types of Hyponatremia by Tonicity</span></a>
+    <a class="card" href="renal_57_siadh_causes.html" style="--c:#10b981"><span class="num">57</span><span class="ctitle">Causes of SIADH (Euvolemic Hyponatremia)</span></a>
+    <a class="card" href="renal_58_hyponatremia_management.html" style="--c:#10b981"><span class="num">58</span><span class="ctitle">Management of Hyponatremia</span></a>
+  </div>
+</section>
+
+<section class="section" data-section>
+  <div class="section-head">
+    <span class="section-icon">🧬</span>
+    <span class="section-title">Hypernatremia</span>
+    <span class="section-badge">3 games</span>
+  </div>
+  <div class="cards">
+    <a class="card" href="renal_59_hypernatremia_causes.html" style="--c:#8b5cf6"><span class="num">59</span><span class="ctitle">Causes of Hypernatremia</span></a>
+    <a class="card" href="renal_60_central_vs_nephrogenic_di.html" style="--c:#8b5cf6"><span class="num">60</span><span class="ctitle">Central vs Nephrogenic DI</span></a>
+    <a class="card" href="renal_61_hypernatremia_diagnosis_treatment.html" style="--c:#8b5cf6"><span class="num">61</span><span class="ctitle">Diagnosis and Management</span></a>
+  </div>
+</section>
+
+<section class="section" data-section>
+  <div class="section-head">
+    <span class="section-icon">⚗️</span>
+    <span class="section-title">Antidiuretic Hormone Agonists</span>
+    <span class="section-badge">3 games</span>
+  </div>
+  <div class="cards">
+    <a class="card" href="renal_62_adh_agents_overview.html" style="--c:#06b6d4"><span class="num">62</span><span class="ctitle">ADH Agonists: Agent Profiles</span></a>
+    <a class="card" href="renal_63_vasopressin_receptors.html" style="--c:#06b6d4"><span class="num">63</span><span class="ctitle">Vasopressin Receptor Actions</span></a>
+    <a class="card" href="renal_64_adh_indications_adverse.html" style="--c:#06b6d4"><span class="num">64</span><span class="ctitle">Indications and Adverse Effects</span></a>
+  </div>
+</section>
+
+<section class="section" data-section>
+  <div class="section-head">
+    <span class="section-icon">🔬</span>
+    <span class="section-title">ADH Receptor Antagonists</span>
+    <span class="section-badge">3 games</span>
+  </div>
+  <div class="cards">
+    <a class="card" href="renal_65_adh_antagonist_drugs.html" style="--c:#ec4899"><span class="num">65</span><span class="ctitle">ADH Antagonist Drugs</span></a>
+    <a class="card" href="renal_66_adh_antagonist_indications.html" style="--c:#ec4899"><span class="num">66</span><span class="ctitle">Clinical Indications</span></a>
+    <a class="card" href="renal_67_adh_antagonist_adverse.html" style="--c:#ec4899"><span class="num">67</span><span class="ctitle">Adverse Effects and Cautions</span></a>
+  </div>
+</section>
+
+</main>
+
+<script>
+document.getElementById('search').addEventListener('input', function() {
+  const q = this.value.toLowerCase().trim();
+  let anyVisible = false;
+  document.querySelectorAll('.section').forEach(sec => {
+    let secVisible = false;
+    sec.querySelectorAll('.card').forEach(c => {
+      const match = c.textContent.toLowerCase().includes(q);
+      c.style.display = match ? '' : 'none';
+      if (match) secVisible = true;
+    });
+    sec.style.display = secVisible ? '' : 'none';
+    if (secVisible) anyVisible = true;
+  });
+  document.getElementById('noResults').style.display = anyVisible ? 'none' : 'block';
+});
+</script>
+</body>
+</html>
