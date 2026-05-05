@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adverse Effects and Cautions - Drag &amp; Drop Study Game</title>
+    <title>AEIOU Indications for Dialysis - Drag &amp; Drop Study Game</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
@@ -117,11 +117,11 @@
 </head>
 <body>
 <a href="renal_index.html" style="position:fixed;top:12px;left:12px;z-index:9999;background:rgba(0,0,0,0.55);color:#94a3b8;border:1px solid rgba(255,255,255,0.13);border-radius:20px;padding:5px 13px;font-size:.72rem;text-decoration:none;font-family:'Segoe UI',sans-serif;backdrop-filter:blur(8px);transition:.15s;letter-spacing:.3px;" onmouseover="this.style.color='#f1f5f9';this.style.borderColor='rgba(255,255,255,0.3)'" onmouseout="this.style.color='#94a3b8';this.style.borderColor='rgba(255,255,255,0.13)'">&#8592; Index</a>
-<div style="position:fixed;top:12px;right:12px;z-index:9999;display:flex;gap:8px;"><a href="renal_66_adh_antagonist_indications.html" style="background:rgba(0,0,0,0.72);color:#e2e8f0;border:1px solid rgba(255,255,255,0.22);border-radius:22px;padding:8px 18px;font-size:.85rem;font-weight:600;text-decoration:none;font-family:'Segoe UI',sans-serif;backdrop-filter:blur(10px);transition:.15s;display:inline-flex;align-items:center;gap:6px;" onmouseover="this.style.color='#fff';this.style.borderColor='rgba(255,255,255,0.5)';this.style.background='rgba(0,0,0,0.88)'" onmouseout="this.style.color='#e2e8f0';this.style.borderColor='rgba(255,255,255,0.22)';this.style.background='rgba(0,0,0,0.72)'">&#8592; Prev</a><a href="renal_68_hypokalemia_causes.html" style="background:rgba(0,0,0,0.72);color:#e2e8f0;border:1px solid rgba(255,255,255,0.22);border-radius:22px;padding:8px 18px;font-size:.85rem;font-weight:600;text-decoration:none;font-family:'Segoe UI',sans-serif;backdrop-filter:blur(10px);transition:.15s;display:inline-flex;align-items:center;gap:6px;" onmouseover="this.style.color='#fff';this.style.borderColor='rgba(255,255,255,0.5)';this.style.background='rgba(0,0,0,0.88)'" onmouseout="this.style.color='#e2e8f0';this.style.borderColor='rgba(255,255,255,0.22)';this.style.background='rgba(0,0,0,0.72)'">Next &#8594;</a></div>
+<div style="position:fixed;top:12px;right:12px;z-index:9999;display:flex;gap:8px;"><a href="renal_106_aki_management_by_type.html" style="background:rgba(0,0,0,0.72);color:#e2e8f0;border:1px solid rgba(255,255,255,0.22);border-radius:22px;padding:8px 18px;font-size:.85rem;font-weight:600;text-decoration:none;font-family:'Segoe UI',sans-serif;backdrop-filter:blur(10px);transition:.15s;display:inline-flex;align-items:center;gap:6px;" onmouseover="this.style.color='#fff';this.style.borderColor='rgba(255,255,255,0.5)';this.style.background='rgba(0,0,0,0.88)'" onmouseout="this.style.color='#e2e8f0';this.style.borderColor='rgba(255,255,255,0.22)';this.style.background='rgba(0,0,0,0.72)'">&#8592; Prev</a><a href="renal_108_ckd_causes.html" style="background:rgba(0,0,0,0.72);color:#e2e8f0;border:1px solid rgba(255,255,255,0.22);border-radius:22px;padding:8px 18px;font-size:.85rem;font-weight:600;text-decoration:none;font-family:'Segoe UI',sans-serif;backdrop-filter:blur(10px);transition:.15s;display:inline-flex;align-items:center;gap:6px;" onmouseover="this.style.color='#fff';this.style.borderColor='rgba(255,255,255,0.5)';this.style.background='rgba(0,0,0,0.88)'" onmouseout="this.style.color='#e2e8f0';this.style.borderColor='rgba(255,255,255,0.22)';this.style.background='rgba(0,0,0,0.72)'">Next &#8594;</a></div>
 
     <div class="container">
-        <h1>🧬 Adverse Effects and Cautions</h1>
-        <p class="subtitle">Match each adverse effect to its cause and management</p>
+        <h1>🧬 AEIOU Indications for Dialysis</h1>
+        <p class="subtitle">Match each AEIOU letter to its meaning and threshold or sign</p>
         <div class="stats-controls">
             <div class="stats">
                 <div class="stat-item"><span class="stat-label">Score:</span><span id="score">0</span>/<span id="total">0</span></div>
@@ -138,13 +138,13 @@
             <div class="word-bank-container">
                 <div class="word-bank-title">&#x1F4DA; Word Bank</div>
                 <div class="tabs">
-                    <button class="tab active" onclick="switchTab('cause', this)">Cause</button>
-                    <button class="tab" onclick="switchTab('associated_drug', this)">Associated Drug</button>
-                    <button class="tab" onclick="switchTab('mitigation_strategy', this)">Mitigation Strategy</button>
+                    <button class="tab active" onclick="switchTab('letter_stands_for', this)">Letter Stands For</button>
+                    <button class="tab" onclick="switchTab('clinical_meaning', this)">Clinical Meaning</button>
+                    <button class="tab" onclick="switchTab('threshold_or_sign', this)">Threshold or Sign</button>
                 </div>
-                <div id="cause-bank" class="word-bank active"></div>
-                <div id="associated_drug-bank" class="word-bank"></div>
-                <div id="mitigation_strategy-bank" class="word-bank"></div>
+                <div id="letter_stands_for-bank" class="word-bank active"></div>
+                <div id="clinical_meaning-bank" class="word-bank"></div>
+                <div id="threshold_or_sign-bank" class="word-bank"></div>
             </div>
             <div class="cards-container" id="cards-container"></div>
         </div>
@@ -159,29 +159,34 @@
         </div>
     </div>
     <script>
-        const categoryKeys = ["cause", "associated_drug", "mitigation_strategy"];
-        const categoryLabels = {"cause": "Cause", "associated_drug": "Associated Drug", "mitigation_strategy": "Mitigation Strategy"};
+        const categoryKeys = ["letter_stands_for", "clinical_meaning", "threshold_or_sign"];
+        const categoryLabels = {"letter_stands_for": "Letter Stands For", "clinical_meaning": "Clinical Meaning", "threshold_or_sign": "Threshold or Sign"};
 
         const gameData = {
-            "Osmotic Demyelinating Syndrome": {
-                "cause": "Too-rapid correction of hyponatremia by vaptans",
-                "associated_drug": "Conivaptan and tolvaptan",
-                "mitigation_strategy": "Limit sodium rise to under 6-8 mEq/L per 24 hours"
+            "A": {
+                "letter_stands_for": "Acidosis (metabolic)",
+                "clinical_meaning": "Severe metabolic acidosis from failed acid excretion",
+                "threshold_or_sign": "Blood pH less than 7.1"
             },
-            "Hepatotoxicity": {
-                "cause": "Elevated transaminases from V2 antagonist therapy",
-                "associated_drug": "Tolvaptan only, not conivaptan",
-                "mitigation_strategy": "Avoid in liver disease; limit use to under 30 days"
+            "E": {
+                "letter_stands_for": "Electrolyte imbalances",
+                "clinical_meaning": "Severe hyperkalemia not controlled by medications",
+                "threshold_or_sign": "Potassium greater than 6.5 mEq/L"
             },
-            "Orthostatic Hypotension": {
-                "cause": "Blockade of vasoconstricting V1 receptors",
-                "associated_drug": "Conivaptan",
-                "mitigation_strategy": "Monitor blood pressure; switch to selective V2 agent"
+            "I": {
+                "letter_stands_for": "Intoxications",
+                "clinical_meaning": "Some alcohol or drug poisonings cleared by dialysis",
+                "threshold_or_sign": "Toxic ingestion refractory to standard therapy"
             },
-            "CYP3A4 Drug Interactions": {
-                "cause": "Vaptans are moderate CYP3A4 inhibitors",
-                "associated_drug": "Conivaptan and tolvaptan",
-                "mitigation_strategy": "Avoid ketoconazole, macrolides, ciprofloxacin, diazepam"
+            "O": {
+                "letter_stands_for": "Overload (fluid)",
+                "clinical_meaning": "Volume overload causing pulmonary edema or hypoxia",
+                "threshold_or_sign": "Fluid overload refractory to diuresis"
+            },
+            "U": {
+                "letter_stands_for": "Uremia",
+                "clinical_meaning": "Toxin buildup with neurologic or cardiac signs",
+                "threshold_or_sign": "Pericarditis, encephalopathy, or unexplained mental decline"
             }
         };
 

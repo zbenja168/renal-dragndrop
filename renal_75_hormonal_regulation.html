@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adverse Effects and Cautions - Drag &amp; Drop Study Game</title>
+    <title>Hormones and Factors - Drag &amp; Drop Study Game</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
@@ -117,11 +117,11 @@
 </head>
 <body>
 <a href="renal_index.html" style="position:fixed;top:12px;left:12px;z-index:9999;background:rgba(0,0,0,0.55);color:#94a3b8;border:1px solid rgba(255,255,255,0.13);border-radius:20px;padding:5px 13px;font-size:.72rem;text-decoration:none;font-family:'Segoe UI',sans-serif;backdrop-filter:blur(8px);transition:.15s;letter-spacing:.3px;" onmouseover="this.style.color='#f1f5f9';this.style.borderColor='rgba(255,255,255,0.3)'" onmouseout="this.style.color='#94a3b8';this.style.borderColor='rgba(255,255,255,0.13)'">&#8592; Index</a>
-<div style="position:fixed;top:12px;right:12px;z-index:9999;display:flex;gap:8px;"><a href="renal_66_adh_antagonist_indications.html" style="background:rgba(0,0,0,0.72);color:#e2e8f0;border:1px solid rgba(255,255,255,0.22);border-radius:22px;padding:8px 18px;font-size:.85rem;font-weight:600;text-decoration:none;font-family:'Segoe UI',sans-serif;backdrop-filter:blur(10px);transition:.15s;display:inline-flex;align-items:center;gap:6px;" onmouseover="this.style.color='#fff';this.style.borderColor='rgba(255,255,255,0.5)';this.style.background='rgba(0,0,0,0.88)'" onmouseout="this.style.color='#e2e8f0';this.style.borderColor='rgba(255,255,255,0.22)';this.style.background='rgba(0,0,0,0.72)'">&#8592; Prev</a><a href="renal_68_hypokalemia_causes.html" style="background:rgba(0,0,0,0.72);color:#e2e8f0;border:1px solid rgba(255,255,255,0.22);border-radius:22px;padding:8px 18px;font-size:.85rem;font-weight:600;text-decoration:none;font-family:'Segoe UI',sans-serif;backdrop-filter:blur(10px);transition:.15s;display:inline-flex;align-items:center;gap:6px;" onmouseover="this.style.color='#fff';this.style.borderColor='rgba(255,255,255,0.5)';this.style.background='rgba(0,0,0,0.88)'" onmouseout="this.style.color='#e2e8f0';this.style.borderColor='rgba(255,255,255,0.22)';this.style.background='rgba(0,0,0,0.72)'">Next &#8594;</a></div>
+<div style="position:fixed;top:12px;right:12px;z-index:9999;display:flex;gap:8px;"><a href="renal_74_nephron_segment_handling.html" style="background:rgba(0,0,0,0.72);color:#e2e8f0;border:1px solid rgba(255,255,255,0.22);border-radius:22px;padding:8px 18px;font-size:.85rem;font-weight:600;text-decoration:none;font-family:'Segoe UI',sans-serif;backdrop-filter:blur(10px);transition:.15s;display:inline-flex;align-items:center;gap:6px;" onmouseover="this.style.color='#fff';this.style.borderColor='rgba(255,255,255,0.5)';this.style.background='rgba(0,0,0,0.88)'" onmouseout="this.style.color='#e2e8f0';this.style.borderColor='rgba(255,255,255,0.22)';this.style.background='rgba(0,0,0,0.72)'">&#8592; Prev</a><a href="renal_76_ckd_mbd_and_management.html" style="background:rgba(0,0,0,0.72);color:#e2e8f0;border:1px solid rgba(255,255,255,0.22);border-radius:22px;padding:8px 18px;font-size:.85rem;font-weight:600;text-decoration:none;font-family:'Segoe UI',sans-serif;backdrop-filter:blur(10px);transition:.15s;display:inline-flex;align-items:center;gap:6px;" onmouseover="this.style.color='#fff';this.style.borderColor='rgba(255,255,255,0.5)';this.style.background='rgba(0,0,0,0.88)'" onmouseout="this.style.color='#e2e8f0';this.style.borderColor='rgba(255,255,255,0.22)';this.style.background='rgba(0,0,0,0.72)'">Next &#8594;</a></div>
 
     <div class="container">
-        <h1>🧬 Adverse Effects and Cautions</h1>
-        <p class="subtitle">Match each adverse effect to its cause and management</p>
+        <h1>🧬 Hormones and Factors</h1>
+        <p class="subtitle">Match regulators to their effects on calcium and phosphate</p>
         <div class="stats-controls">
             <div class="stats">
                 <div class="stat-item"><span class="stat-label">Score:</span><span id="score">0</span>/<span id="total">0</span></div>
@@ -138,13 +138,13 @@
             <div class="word-bank-container">
                 <div class="word-bank-title">&#x1F4DA; Word Bank</div>
                 <div class="tabs">
-                    <button class="tab active" onclick="switchTab('cause', this)">Cause</button>
-                    <button class="tab" onclick="switchTab('associated_drug', this)">Associated Drug</button>
-                    <button class="tab" onclick="switchTab('mitigation_strategy', this)">Mitigation Strategy</button>
+                    <button class="tab active" onclick="switchTab('effect_on_calcium', this)">Effect on Calcium</button>
+                    <button class="tab" onclick="switchTab('effect_on_phosphate', this)">Effect on Phosphate</button>
+                    <button class="tab" onclick="switchTab('source_or_trigger', this)">Source or Trigger</button>
                 </div>
-                <div id="cause-bank" class="word-bank active"></div>
-                <div id="associated_drug-bank" class="word-bank"></div>
-                <div id="mitigation_strategy-bank" class="word-bank"></div>
+                <div id="effect_on_calcium-bank" class="word-bank active"></div>
+                <div id="effect_on_phosphate-bank" class="word-bank"></div>
+                <div id="source_or_trigger-bank" class="word-bank"></div>
             </div>
             <div class="cards-container" id="cards-container"></div>
         </div>
@@ -159,29 +159,34 @@
         </div>
     </div>
     <script>
-        const categoryKeys = ["cause", "associated_drug", "mitigation_strategy"];
-        const categoryLabels = {"cause": "Cause", "associated_drug": "Associated Drug", "mitigation_strategy": "Mitigation Strategy"};
+        const categoryKeys = ["effect_on_calcium", "effect_on_phosphate", "source_or_trigger"];
+        const categoryLabels = {"effect_on_calcium": "Effect on Calcium", "effect_on_phosphate": "Effect on Phosphate", "source_or_trigger": "Source or Trigger"};
 
         const gameData = {
-            "Osmotic Demyelinating Syndrome": {
-                "cause": "Too-rapid correction of hyponatremia by vaptans",
-                "associated_drug": "Conivaptan and tolvaptan",
-                "mitigation_strategy": "Limit sodium rise to under 6-8 mEq/L per 24 hours"
+            "PTH": {
+                "effect_on_calcium": "Increases tubular calcium reabsorption in DCT",
+                "effect_on_phosphate": "Decreases proximal phosphate reabsorption, raises excretion",
+                "source_or_trigger": "Parathyroid glands respond to low serum calcium"
             },
-            "Hepatotoxicity": {
-                "cause": "Elevated transaminases from V2 antagonist therapy",
-                "associated_drug": "Tolvaptan only, not conivaptan",
-                "mitigation_strategy": "Avoid in liver disease; limit use to under 30 days"
+            "Calcitriol": {
+                "effect_on_calcium": "Increases calcium reabsorption alongside PTH in DCT",
+                "effect_on_phosphate": "Promotes phosphate reabsorption indirectly via gut absorption",
+                "source_or_trigger": "Activated vitamin D from kidney 1-alpha-hydroxylase"
             },
-            "Orthostatic Hypotension": {
-                "cause": "Blockade of vasoconstricting V1 receptors",
-                "associated_drug": "Conivaptan",
-                "mitigation_strategy": "Monitor blood pressure; switch to selective V2 agent"
+            "FGF-23": {
+                "effect_on_calcium": "Indirect, lowers calcitriol reducing calcium absorption",
+                "effect_on_phosphate": "Reduces proximal phosphate reabsorption, increases urinary excretion",
+                "source_or_trigger": "Osteocytes release it when serum phosphate is high"
             },
-            "CYP3A4 Drug Interactions": {
-                "cause": "Vaptans are moderate CYP3A4 inhibitors",
-                "associated_drug": "Conivaptan and tolvaptan",
-                "mitigation_strategy": "Avoid ketoconazole, macrolides, ciprofloxacin, diazepam"
+            "Calcium-Sensing Receptor": {
+                "effect_on_calcium": "High calcium triggers less reabsorption in loop",
+                "effect_on_phosphate": "No direct phosphate effect from this receptor",
+                "source_or_trigger": "Thick ascending limb senses interstitial calcium levels"
+            },
+            "Metabolic Acidosis": {
+                "effect_on_calcium": "Promotes bone resorption releasing calcium into blood",
+                "effect_on_phosphate": "Reduces phosphate reabsorption to buffer urinary acid",
+                "source_or_trigger": "Kidneys use phosphate as titratable acid carrier"
             }
         };
 

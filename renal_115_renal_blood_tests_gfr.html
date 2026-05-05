@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adverse Effects and Cautions - Drag &amp; Drop Study Game</title>
+    <title>Blood Tests and GFR Estimation - Drag &amp; Drop Study Game</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
@@ -117,11 +117,11 @@
 </head>
 <body>
 <a href="renal_index.html" style="position:fixed;top:12px;left:12px;z-index:9999;background:rgba(0,0,0,0.55);color:#94a3b8;border:1px solid rgba(255,255,255,0.13);border-radius:20px;padding:5px 13px;font-size:.72rem;text-decoration:none;font-family:'Segoe UI',sans-serif;backdrop-filter:blur(8px);transition:.15s;letter-spacing:.3px;" onmouseover="this.style.color='#f1f5f9';this.style.borderColor='rgba(255,255,255,0.3)'" onmouseout="this.style.color='#94a3b8';this.style.borderColor='rgba(255,255,255,0.13)'">&#8592; Index</a>
-<div style="position:fixed;top:12px;right:12px;z-index:9999;display:flex;gap:8px;"><a href="renal_66_adh_antagonist_indications.html" style="background:rgba(0,0,0,0.72);color:#e2e8f0;border:1px solid rgba(255,255,255,0.22);border-radius:22px;padding:8px 18px;font-size:.85rem;font-weight:600;text-decoration:none;font-family:'Segoe UI',sans-serif;backdrop-filter:blur(10px);transition:.15s;display:inline-flex;align-items:center;gap:6px;" onmouseover="this.style.color='#fff';this.style.borderColor='rgba(255,255,255,0.5)';this.style.background='rgba(0,0,0,0.88)'" onmouseout="this.style.color='#e2e8f0';this.style.borderColor='rgba(255,255,255,0.22)';this.style.background='rgba(0,0,0,0.72)'">&#8592; Prev</a><a href="renal_68_hypokalemia_causes.html" style="background:rgba(0,0,0,0.72);color:#e2e8f0;border:1px solid rgba(255,255,255,0.22);border-radius:22px;padding:8px 18px;font-size:.85rem;font-weight:600;text-decoration:none;font-family:'Segoe UI',sans-serif;backdrop-filter:blur(10px);transition:.15s;display:inline-flex;align-items:center;gap:6px;" onmouseover="this.style.color='#fff';this.style.borderColor='rgba(255,255,255,0.5)';this.style.background='rgba(0,0,0,0.88)'" onmouseout="this.style.color='#e2e8f0';this.style.borderColor='rgba(255,255,255,0.22)';this.style.background='rgba(0,0,0,0.72)'">Next &#8594;</a></div>
+<div style="position:fixed;top:12px;right:12px;z-index:9999;display:flex;gap:8px;"><a href="renal_114_dialysis_indications.html" style="background:rgba(0,0,0,0.72);color:#e2e8f0;border:1px solid rgba(255,255,255,0.22);border-radius:22px;padding:8px 18px;font-size:.85rem;font-weight:600;text-decoration:none;font-family:'Segoe UI',sans-serif;backdrop-filter:blur(10px);transition:.15s;display:inline-flex;align-items:center;gap:6px;" onmouseover="this.style.color='#fff';this.style.borderColor='rgba(255,255,255,0.5)';this.style.background='rgba(0,0,0,0.88)'" onmouseout="this.style.color='#e2e8f0';this.style.borderColor='rgba(255,255,255,0.22)';this.style.background='rgba(0,0,0,0.72)'">&#8592; Prev</a><a href="renal_116_urine_dipstick_findings.html" style="background:rgba(0,0,0,0.72);color:#e2e8f0;border:1px solid rgba(255,255,255,0.22);border-radius:22px;padding:8px 18px;font-size:.85rem;font-weight:600;text-decoration:none;font-family:'Segoe UI',sans-serif;backdrop-filter:blur(10px);transition:.15s;display:inline-flex;align-items:center;gap:6px;" onmouseover="this.style.color='#fff';this.style.borderColor='rgba(255,255,255,0.5)';this.style.background='rgba(0,0,0,0.88)'" onmouseout="this.style.color='#e2e8f0';this.style.borderColor='rgba(255,255,255,0.22)';this.style.background='rgba(0,0,0,0.72)'">Next &#8594;</a></div>
 
     <div class="container">
-        <h1>🧬 Adverse Effects and Cautions</h1>
-        <p class="subtitle">Match each adverse effect to its cause and management</p>
+        <h1>🧬 Blood Tests and GFR Estimation</h1>
+        <p class="subtitle">Match each renal blood test to its key features</p>
         <div class="stats-controls">
             <div class="stats">
                 <div class="stat-item"><span class="stat-label">Score:</span><span id="score">0</span>/<span id="total">0</span></div>
@@ -138,13 +138,13 @@
             <div class="word-bank-container">
                 <div class="word-bank-title">&#x1F4DA; Word Bank</div>
                 <div class="tabs">
-                    <button class="tab active" onclick="switchTab('cause', this)">Cause</button>
-                    <button class="tab" onclick="switchTab('associated_drug', this)">Associated Drug</button>
-                    <button class="tab" onclick="switchTab('mitigation_strategy', this)">Mitigation Strategy</button>
+                    <button class="tab active" onclick="switchTab('what_it_measures', this)">What It Measures</button>
+                    <button class="tab" onclick="switchTab('key_feature', this)">Key Feature</button>
+                    <button class="tab" onclick="switchTab('limitation_or_use', this)">Limitation or Use</button>
                 </div>
-                <div id="cause-bank" class="word-bank active"></div>
-                <div id="associated_drug-bank" class="word-bank"></div>
-                <div id="mitigation_strategy-bank" class="word-bank"></div>
+                <div id="what_it_measures-bank" class="word-bank active"></div>
+                <div id="key_feature-bank" class="word-bank"></div>
+                <div id="limitation_or_use-bank" class="word-bank"></div>
             </div>
             <div class="cards-container" id="cards-container"></div>
         </div>
@@ -159,29 +159,39 @@
         </div>
     </div>
     <script>
-        const categoryKeys = ["cause", "associated_drug", "mitigation_strategy"];
-        const categoryLabels = {"cause": "Cause", "associated_drug": "Associated Drug", "mitigation_strategy": "Mitigation Strategy"};
+        const categoryKeys = ["what_it_measures", "key_feature", "limitation_or_use"];
+        const categoryLabels = {"what_it_measures": "What It Measures", "key_feature": "Key Feature", "limitation_or_use": "Limitation or Use"};
 
         const gameData = {
-            "Osmotic Demyelinating Syndrome": {
-                "cause": "Too-rapid correction of hyponatremia by vaptans",
-                "associated_drug": "Conivaptan and tolvaptan",
-                "mitigation_strategy": "Limit sodium rise to under 6-8 mEq/L per 24 hours"
+            "Serum Creatinine": {
+                "what_it_measures": "Filtration marker; byproduct of muscle creatine breakdown",
+                "key_feature": "Freely filtered, not absorbed, minimally secreted",
+                "limitation_or_use": "Depends on muscle mass, age, sex, race"
             },
-            "Hepatotoxicity": {
-                "cause": "Elevated transaminases from V2 antagonist therapy",
-                "associated_drug": "Tolvaptan only, not conivaptan",
-                "mitigation_strategy": "Avoid in liver disease; limit use to under 30 days"
+            "Blood Urea Nitrogen": {
+                "what_it_measures": "Urea solute level; surrogate marker of GFR",
+                "key_feature": "Filtered but reabsorbed and varies with diet",
+                "limitation_or_use": "Influenced by GI bleeding, catabolism, high protein intake"
             },
-            "Orthostatic Hypotension": {
-                "cause": "Blockade of vasoconstricting V1 receptors",
-                "associated_drug": "Conivaptan",
-                "mitigation_strategy": "Monitor blood pressure; switch to selective V2 agent"
+            "24-Hour Creatinine Clearance": {
+                "what_it_measures": "GFR via timed urine creatinine collection",
+                "key_feature": "Formula uses urine volume, urine and plasma Cr",
+                "limitation_or_use": "Cumbersome but historically gold standard for GFR"
             },
-            "CYP3A4 Drug Interactions": {
-                "cause": "Vaptans are moderate CYP3A4 inhibitors",
-                "associated_drug": "Conivaptan and tolvaptan",
-                "mitigation_strategy": "Avoid ketoconazole, macrolides, ciprofloxacin, diazepam"
+            "MDRD Equation": {
+                "what_it_measures": "Estimated GFR using SCr and demographics",
+                "key_feature": "Uses age, gender, ethnicity, and standard SCr",
+                "limitation_or_use": "Older equation, less accurate at higher GFR values"
+            },
+            "CKD-EPI Equation (2021)": {
+                "what_it_measures": "Estimated GFR using SCr without race variable",
+                "key_feature": "Uses age, gender, and serum creatinine only",
+                "limitation_or_use": "Most accurate and current eGFR equation used"
+            },
+            "Cockcroft-Gault Equation": {
+                "what_it_measures": "Estimated creatinine clearance from SCr",
+                "key_feature": "Uses age, weight, sex, and gender coefficient",
+                "limitation_or_use": "Often used for renal drug dose adjustments"
             }
         };
 

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adverse Effects and Cautions - Drag &amp; Drop Study Game</title>
+    <title>Diagnosis and Management - Drag &amp; Drop Study Game</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
@@ -117,11 +117,11 @@
 </head>
 <body>
 <a href="renal_index.html" style="position:fixed;top:12px;left:12px;z-index:9999;background:rgba(0,0,0,0.55);color:#94a3b8;border:1px solid rgba(255,255,255,0.13);border-radius:20px;padding:5px 13px;font-size:.72rem;text-decoration:none;font-family:'Segoe UI',sans-serif;backdrop-filter:blur(8px);transition:.15s;letter-spacing:.3px;" onmouseover="this.style.color='#f1f5f9';this.style.borderColor='rgba(255,255,255,0.3)'" onmouseout="this.style.color='#94a3b8';this.style.borderColor='rgba(255,255,255,0.13)'">&#8592; Index</a>
-<div style="position:fixed;top:12px;right:12px;z-index:9999;display:flex;gap:8px;"><a href="renal_66_adh_antagonist_indications.html" style="background:rgba(0,0,0,0.72);color:#e2e8f0;border:1px solid rgba(255,255,255,0.22);border-radius:22px;padding:8px 18px;font-size:.85rem;font-weight:600;text-decoration:none;font-family:'Segoe UI',sans-serif;backdrop-filter:blur(10px);transition:.15s;display:inline-flex;align-items:center;gap:6px;" onmouseover="this.style.color='#fff';this.style.borderColor='rgba(255,255,255,0.5)';this.style.background='rgba(0,0,0,0.88)'" onmouseout="this.style.color='#e2e8f0';this.style.borderColor='rgba(255,255,255,0.22)';this.style.background='rgba(0,0,0,0.72)'">&#8592; Prev</a><a href="renal_68_hypokalemia_causes.html" style="background:rgba(0,0,0,0.72);color:#e2e8f0;border:1px solid rgba(255,255,255,0.22);border-radius:22px;padding:8px 18px;font-size:.85rem;font-weight:600;text-decoration:none;font-family:'Segoe UI',sans-serif;backdrop-filter:blur(10px);transition:.15s;display:inline-flex;align-items:center;gap:6px;" onmouseover="this.style.color='#fff';this.style.borderColor='rgba(255,255,255,0.5)';this.style.background='rgba(0,0,0,0.88)'" onmouseout="this.style.color='#e2e8f0';this.style.borderColor='rgba(255,255,255,0.22)';this.style.background='rgba(0,0,0,0.72)'">Next &#8594;</a></div>
+<div style="position:fixed;top:12px;right:12px;z-index:9999;display:flex;gap:8px;"><a href="renal_90_alkalosis_causes_classification.html" style="background:rgba(0,0,0,0.72);color:#e2e8f0;border:1px solid rgba(255,255,255,0.22);border-radius:22px;padding:8px 18px;font-size:.85rem;font-weight:600;text-decoration:none;font-family:'Segoe UI',sans-serif;backdrop-filter:blur(10px);transition:.15s;display:inline-flex;align-items:center;gap:6px;" onmouseover="this.style.color='#fff';this.style.borderColor='rgba(255,255,255,0.5)';this.style.background='rgba(0,0,0,0.88)'" onmouseout="this.style.color='#e2e8f0';this.style.borderColor='rgba(255,255,255,0.22)';this.style.background='rgba(0,0,0,0.72)'">&#8592; Prev</a><a href="renal_92_resp_acidosis_basics.html" style="background:rgba(0,0,0,0.72);color:#e2e8f0;border:1px solid rgba(255,255,255,0.22);border-radius:22px;padding:8px 18px;font-size:.85rem;font-weight:600;text-decoration:none;font-family:'Segoe UI',sans-serif;backdrop-filter:blur(10px);transition:.15s;display:inline-flex;align-items:center;gap:6px;" onmouseover="this.style.color='#fff';this.style.borderColor='rgba(255,255,255,0.5)';this.style.background='rgba(0,0,0,0.88)'" onmouseout="this.style.color='#e2e8f0';this.style.borderColor='rgba(255,255,255,0.22)';this.style.background='rgba(0,0,0,0.72)'">Next &#8594;</a></div>
 
     <div class="container">
-        <h1>🧬 Adverse Effects and Cautions</h1>
-        <p class="subtitle">Match each adverse effect to its cause and management</p>
+        <h1>🧬 Diagnosis and Management</h1>
+        <p class="subtitle">Match findings and treatments to alkalosis subtypes</p>
         <div class="stats-controls">
             <div class="stats">
                 <div class="stat-item"><span class="stat-label">Score:</span><span id="score">0</span>/<span id="total">0</span></div>
@@ -138,13 +138,13 @@
             <div class="word-bank-container">
                 <div class="word-bank-title">&#x1F4DA; Word Bank</div>
                 <div class="tabs">
-                    <button class="tab active" onclick="switchTab('cause', this)">Cause</button>
-                    <button class="tab" onclick="switchTab('associated_drug', this)">Associated Drug</button>
-                    <button class="tab" onclick="switchTab('mitigation_strategy', this)">Mitigation Strategy</button>
+                    <button class="tab active" onclick="switchTab('lab_findings', this)">Lab Findings</button>
+                    <button class="tab" onclick="switchTab('physical_exam', this)">Physical Exam</button>
+                    <button class="tab" onclick="switchTab('treatment', this)">Treatment</button>
                 </div>
-                <div id="cause-bank" class="word-bank active"></div>
-                <div id="associated_drug-bank" class="word-bank"></div>
-                <div id="mitigation_strategy-bank" class="word-bank"></div>
+                <div id="lab_findings-bank" class="word-bank active"></div>
+                <div id="physical_exam-bank" class="word-bank"></div>
+                <div id="treatment-bank" class="word-bank"></div>
             </div>
             <div class="cards-container" id="cards-container"></div>
         </div>
@@ -159,29 +159,34 @@
         </div>
     </div>
     <script>
-        const categoryKeys = ["cause", "associated_drug", "mitigation_strategy"];
-        const categoryLabels = {"cause": "Cause", "associated_drug": "Associated Drug", "mitigation_strategy": "Mitigation Strategy"};
+        const categoryKeys = ["lab_findings", "physical_exam", "treatment"];
+        const categoryLabels = {"lab_findings": "Lab Findings", "physical_exam": "Physical Exam", "treatment": "Treatment"};
 
         const gameData = {
-            "Osmotic Demyelinating Syndrome": {
-                "cause": "Too-rapid correction of hyponatremia by vaptans",
-                "associated_drug": "Conivaptan and tolvaptan",
-                "mitigation_strategy": "Limit sodium rise to under 6-8 mEq/L per 24 hours"
+            "Chloride-Responsive": {
+                "lab_findings": "High pH, high HCO3, high PaCO2, urine Cl under 10",
+                "physical_exam": "Low BP, tachycardia, dry mucosa, decreased skin turgor",
+                "treatment": "Normal saline to expand extracellular volume; replace potassium"
             },
-            "Hepatotoxicity": {
-                "cause": "Elevated transaminases from V2 antagonist therapy",
-                "associated_drug": "Tolvaptan only, not conivaptan",
-                "mitigation_strategy": "Avoid in liver disease; limit use to under 30 days"
+            "Hyperaldosteronism": {
+                "lab_findings": "High pH, hypokalemia, urine Cl over 20 mEq/L",
+                "physical_exam": "Hypertension with normal volume status",
+                "treatment": "Aldosterone antagonists plus potassium replacement"
             },
-            "Orthostatic Hypotension": {
-                "cause": "Blockade of vasoconstricting V1 receptors",
-                "associated_drug": "Conivaptan",
-                "mitigation_strategy": "Monitor blood pressure; switch to selective V2 agent"
+            "Liddle Syndrome": {
+                "lab_findings": "High pH, low potassium, low aldosterone, low renin",
+                "physical_exam": "Hypertension from constitutive ENaC activation",
+                "treatment": "ENaC blockers like amiloride plus potassium"
             },
-            "CYP3A4 Drug Interactions": {
-                "cause": "Vaptans are moderate CYP3A4 inhibitors",
-                "associated_drug": "Conivaptan and tolvaptan",
-                "mitigation_strategy": "Avoid ketoconazole, macrolides, ciprofloxacin, diazepam"
+            "17-Hydroxylase Deficiency": {
+                "lab_findings": "High pH, hypokalemia, abnormal adrenal steroid panel",
+                "physical_exam": "Hypertension with congenital enzyme defect",
+                "treatment": "Cortisol replacement plus potassium correction"
+            },
+            "Overall Workup": {
+                "lab_findings": "Electrolytes, urine chloride, venous or arterial blood gas",
+                "physical_exam": "Volume assessment plus blood pressure measurement",
+                "treatment": "Address underlying cause; correct hypokalemia"
             }
         };
 
