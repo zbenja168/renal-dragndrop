@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Diagnostic Workup of Hematuria - Drag &amp; Drop Study Game</title>
+    <title>Nephritic Syndrome: Clinical Features - Drag &amp; Drop Study Game</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
@@ -117,11 +117,11 @@
 </head>
 <body>
 <a href="renal_index.html" style="position:fixed;top:12px;left:12px;z-index:9999;background:rgba(0,0,0,0.55);color:#94a3b8;border:1px solid rgba(255,255,255,0.13);border-radius:20px;padding:5px 13px;font-size:.72rem;text-decoration:none;font-family:'Segoe UI',sans-serif;backdrop-filter:blur(8px);transition:.15s;letter-spacing:.3px;" onmouseover="this.style.color='#f1f5f9';this.style.borderColor='rgba(255,255,255,0.3)'" onmouseout="this.style.color='#94a3b8';this.style.borderColor='rgba(255,255,255,0.13)'">&#8592; Index</a>
-<div style="position:fixed;top:12px;right:12px;z-index:9999;display:flex;gap:8px;"><a href="renal_122_red_urine_mimics.html" style="background:rgba(0,0,0,0.72);color:#e2e8f0;border:1px solid rgba(255,255,255,0.22);border-radius:22px;padding:8px 18px;font-size:.85rem;font-weight:600;text-decoration:none;font-family:'Segoe UI',sans-serif;backdrop-filter:blur(10px);transition:.15s;display:inline-flex;align-items:center;gap:6px;" onmouseover="this.style.color='#fff';this.style.borderColor='rgba(255,255,255,0.5)';this.style.background='rgba(0,0,0,0.88)'" onmouseout="this.style.color='#e2e8f0';this.style.borderColor='rgba(255,255,255,0.22)';this.style.background='rgba(0,0,0,0.72)'">&#8592; Prev</a><a href="renal_124_nephrotic_causes_table.html" style="background:rgba(0,0,0,0.72);color:#e2e8f0;border:1px solid rgba(255,255,255,0.22);border-radius:22px;padding:8px 18px;font-size:.85rem;font-weight:600;text-decoration:none;font-family:'Segoe UI',sans-serif;backdrop-filter:blur(10px);transition:.15s;display:inline-flex;align-items:center;gap:6px;" onmouseover="this.style.color='#fff';this.style.borderColor='rgba(255,255,255,0.5)';this.style.background='rgba(0,0,0,0.88)'" onmouseout="this.style.color='#e2e8f0';this.style.borderColor='rgba(255,255,255,0.22)';this.style.background='rgba(0,0,0,0.72)'">Next &#8594;</a></div>
+<div style="position:fixed;top:12px;right:12px;z-index:9999;display:flex;gap:8px;"><a href="renal_138_mn_management_etiology.html" style="background:rgba(0,0,0,0.72);color:#e2e8f0;border:1px solid rgba(255,255,255,0.22);border-radius:22px;padding:8px 18px;font-size:.85rem;font-weight:600;text-decoration:none;font-family:'Segoe UI',sans-serif;backdrop-filter:blur(10px);transition:.15s;display:inline-flex;align-items:center;gap:6px;" onmouseover="this.style.color='#fff';this.style.borderColor='rgba(255,255,255,0.5)';this.style.background='rgba(0,0,0,0.88)'" onmouseout="this.style.color='#e2e8f0';this.style.borderColor='rgba(255,255,255,0.22)';this.style.background='rgba(0,0,0,0.72)'">&#8592; Prev</a><a href="renal_140_nephritic_pathophysiology_features.html" style="background:rgba(0,0,0,0.72);color:#e2e8f0;border:1px solid rgba(255,255,255,0.22);border-radius:22px;padding:8px 18px;font-size:.85rem;font-weight:600;text-decoration:none;font-family:'Segoe UI',sans-serif;backdrop-filter:blur(10px);transition:.15s;display:inline-flex;align-items:center;gap:6px;" onmouseover="this.style.color='#fff';this.style.borderColor='rgba(255,255,255,0.5)';this.style.background='rgba(0,0,0,0.88)'" onmouseout="this.style.color='#e2e8f0';this.style.borderColor='rgba(255,255,255,0.22)';this.style.background='rgba(0,0,0,0.72)'">Next &#8594;</a></div>
 
     <div class="container">
-        <h1>🧬 Diagnostic Workup of Hematuria</h1>
-        <p class="subtitle">Match each test with its purpose and findings</p>
+        <h1>🧬 Nephritic Syndrome: Clinical Features</h1>
+        <p class="subtitle">Match each finding to its description, cause, and severity in nephritic syndrome.</p>
         <div class="stats-controls">
             <div class="stats">
                 <div class="stat-item"><span class="stat-label">Score:</span><span id="score">0</span>/<span id="total">0</span></div>
@@ -138,13 +138,13 @@
             <div class="word-bank-container">
                 <div class="word-bank-title">&#x1F4DA; Word Bank</div>
                 <div class="tabs">
-                    <button class="tab active" onclick="switchTab('purpose', this)">Purpose</button>
-                    <button class="tab" onclick="switchTab('key_finding', this)">Key Finding</button>
-                    <button class="tab" onclick="switchTab('implication', this)">Implication</button>
+                    <button class="tab active" onclick="switchTab('description', this)">Description</button>
+                    <button class="tab" onclick="switchTab('underlying_cause', this)">Underlying Cause</button>
+                    <button class="tab" onclick="switchTab('severity_or_detail', this)">Severity or Detail</button>
                 </div>
-                <div id="purpose-bank" class="word-bank active"></div>
-                <div id="key_finding-bank" class="word-bank"></div>
-                <div id="implication-bank" class="word-bank"></div>
+                <div id="description-bank" class="word-bank active"></div>
+                <div id="underlying_cause-bank" class="word-bank"></div>
+                <div id="severity_or_detail-bank" class="word-bank"></div>
             </div>
             <div class="cards-container" id="cards-container"></div>
         </div>
@@ -159,39 +159,34 @@
         </div>
     </div>
     <script>
-        const categoryKeys = ["purpose", "key_finding", "implication"];
-        const categoryLabels = {"purpose": "Purpose", "key_finding": "Key Finding", "implication": "Implication"};
+        const categoryKeys = ["description", "underlying_cause", "severity_or_detail"];
+        const categoryLabels = {"description": "Description", "underlying_cause": "Underlying Cause", "severity_or_detail": "Severity or Detail"};
 
         const gameData = {
-            "Urine Dipstick": {
-                "purpose": "Initial screen for blood in urine",
-                "key_finding": "More than 90% sensitive for hematuria",
-                "implication": "Positive result prompts urine microscopy follow-up"
+            "Hematuria": {
+                "description": "Blood in urine, often microscopic but sometimes Coca-Cola or tea-colored.",
+                "underlying_cause": "Glomerular inflammation lets red blood cells leak across the barrier.",
+                "severity_or_detail": "Always present in nephritic syndrome; dysmorphic RBCs and red cell casts."
             },
-            "Urine Microscopy": {
-                "purpose": "Confirm hematuria and identify source",
-                "key_finding": "Dysmorphic RBCs, RBC casts, pyuria, or crystals",
-                "implication": "Dysmorphic RBCs and casts suggest glomerular disease"
+            "Hypertension": {
+                "description": "Elevated blood pressure noted on vitals during clinic visit.",
+                "underlying_cause": "Reduced filtration causes sodium and water retention raising vascular volume.",
+                "severity_or_detail": "Common feature; helped by ACE inhibitors and RAAS blockade therapy."
             },
-            "Serum Creatinine and eGFR": {
-                "purpose": "Assess overall kidney function",
-                "key_finding": "Elevated creatinine with decreased eGFR",
-                "implication": "Suggests intrarenal disease or bilateral urinary obstruction"
+            "Edema": {
+                "description": "Lower extremity swelling that patients commonly notice and report.",
+                "underlying_cause": "Salt and water retention from decreased glomerular filtration rate.",
+                "severity_or_detail": "Variable swelling; diuretics may be needed for symptomatic relief."
             },
-            "Renal Ultrasound or CT": {
-                "purpose": "Image kidneys for structural causes",
-                "key_finding": "Detects stones, cysts, renal tumors, or trauma",
-                "implication": "CT preferred for stones and trauma; US safer in pregnancy"
+            "Proteinuria": {
+                "description": "Protein detected in urine on dipstick or quantified by ratio.",
+                "underlying_cause": "Inflammatory damage to glomerular filtration barrier permits protein leakage.",
+                "severity_or_detail": "Mild to moderate, less than 2 g per 24 hours typically."
             },
-            "Cystoscopy": {
-                "purpose": "Direct bladder visualization by urologists",
-                "key_finding": "Identifies bladder lesions or transitional cell cancer",
-                "implication": "Used when imaging negative and smoker risk present"
-            },
-            "Kidney Biopsy": {
-                "purpose": "Tissue diagnosis of suspected glomerular disease",
-                "key_finding": "Confirms specific glomerulonephritis pathology",
-                "implication": "Done when GFR declining and glomerular suspicion high"
+            "Decreased GFR": {
+                "description": "Reduced filtration shown by elevated serum creatinine concentration.",
+                "underlying_cause": "Cellular proliferation and inflammation obstruct glomerular capillary flow.",
+                "severity_or_detail": "Rapidly rising creatinine signals RPGN requiring urgent biopsy and treatment."
             }
         };
 

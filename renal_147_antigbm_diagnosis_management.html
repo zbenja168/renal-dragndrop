@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Diagnostic Workup of Hematuria - Drag &amp; Drop Study Game</title>
+    <title>Anti-GBM Diagnosis and Management - Drag &amp; Drop Study Game</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
@@ -117,11 +117,11 @@
 </head>
 <body>
 <a href="renal_index.html" style="position:fixed;top:12px;left:12px;z-index:9999;background:rgba(0,0,0,0.55);color:#94a3b8;border:1px solid rgba(255,255,255,0.13);border-radius:20px;padding:5px 13px;font-size:.72rem;text-decoration:none;font-family:'Segoe UI',sans-serif;backdrop-filter:blur(8px);transition:.15s;letter-spacing:.3px;" onmouseover="this.style.color='#f1f5f9';this.style.borderColor='rgba(255,255,255,0.3)'" onmouseout="this.style.color='#94a3b8';this.style.borderColor='rgba(255,255,255,0.13)'">&#8592; Index</a>
-<div style="position:fixed;top:12px;right:12px;z-index:9999;display:flex;gap:8px;"><a href="renal_122_red_urine_mimics.html" style="background:rgba(0,0,0,0.72);color:#e2e8f0;border:1px solid rgba(255,255,255,0.22);border-radius:22px;padding:8px 18px;font-size:.85rem;font-weight:600;text-decoration:none;font-family:'Segoe UI',sans-serif;backdrop-filter:blur(10px);transition:.15s;display:inline-flex;align-items:center;gap:6px;" onmouseover="this.style.color='#fff';this.style.borderColor='rgba(255,255,255,0.5)';this.style.background='rgba(0,0,0,0.88)'" onmouseout="this.style.color='#e2e8f0';this.style.borderColor='rgba(255,255,255,0.22)';this.style.background='rgba(0,0,0,0.72)'">&#8592; Prev</a><a href="renal_124_nephrotic_causes_table.html" style="background:rgba(0,0,0,0.72);color:#e2e8f0;border:1px solid rgba(255,255,255,0.22);border-radius:22px;padding:8px 18px;font-size:.85rem;font-weight:600;text-decoration:none;font-family:'Segoe UI',sans-serif;backdrop-filter:blur(10px);transition:.15s;display:inline-flex;align-items:center;gap:6px;" onmouseover="this.style.color='#fff';this.style.borderColor='rgba(255,255,255,0.5)';this.style.background='rgba(0,0,0,0.88)'" onmouseout="this.style.color='#e2e8f0';this.style.borderColor='rgba(255,255,255,0.22)';this.style.background='rgba(0,0,0,0.72)'">Next &#8594;</a></div>
+<div style="position:fixed;top:12px;right:12px;z-index:9999;display:flex;gap:8px;"><a href="renal_146_antigbm_pathophysiology.html" style="background:rgba(0,0,0,0.72);color:#e2e8f0;border:1px solid rgba(255,255,255,0.22);border-radius:22px;padding:8px 18px;font-size:.85rem;font-weight:600;text-decoration:none;font-family:'Segoe UI',sans-serif;backdrop-filter:blur(10px);transition:.15s;display:inline-flex;align-items:center;gap:6px;" onmouseover="this.style.color='#fff';this.style.borderColor='rgba(255,255,255,0.5)';this.style.background='rgba(0,0,0,0.88)'" onmouseout="this.style.color='#e2e8f0';this.style.borderColor='rgba(255,255,255,0.22)';this.style.background='rgba(0,0,0,0.72)'">&#8592; Prev</a><a href="renal_148_alport_genetic_forms.html" style="background:rgba(0,0,0,0.72);color:#e2e8f0;border:1px solid rgba(255,255,255,0.22);border-radius:22px;padding:8px 18px;font-size:.85rem;font-weight:600;text-decoration:none;font-family:'Segoe UI',sans-serif;backdrop-filter:blur(10px);transition:.15s;display:inline-flex;align-items:center;gap:6px;" onmouseover="this.style.color='#fff';this.style.borderColor='rgba(255,255,255,0.5)';this.style.background='rgba(0,0,0,0.88)'" onmouseout="this.style.color='#e2e8f0';this.style.borderColor='rgba(255,255,255,0.22)';this.style.background='rgba(0,0,0,0.72)'">Next &#8594;</a></div>
 
     <div class="container">
-        <h1>🧬 Diagnostic Workup of Hematuria</h1>
-        <p class="subtitle">Match each test with its purpose and findings</p>
+        <h1>🧬 Anti-GBM Diagnosis and Management</h1>
+        <p class="subtitle">Match each diagnostic or management approach to its details.</p>
         <div class="stats-controls">
             <div class="stats">
                 <div class="stat-item"><span class="stat-label">Score:</span><span id="score">0</span>/<span id="total">0</span></div>
@@ -138,13 +138,13 @@
             <div class="word-bank-container">
                 <div class="word-bank-title">&#x1F4DA; Word Bank</div>
                 <div class="tabs">
-                    <button class="tab active" onclick="switchTab('purpose', this)">Purpose</button>
-                    <button class="tab" onclick="switchTab('key_finding', this)">Key Finding</button>
-                    <button class="tab" onclick="switchTab('implication', this)">Implication</button>
+                    <button class="tab active" onclick="switchTab('modality', this)">Modality</button>
+                    <button class="tab" onclick="switchTab('key_finding_or_action', this)">Key Finding or Action</button>
+                    <button class="tab" onclick="switchTab('clinical_use', this)">Clinical Use</button>
                 </div>
-                <div id="purpose-bank" class="word-bank active"></div>
-                <div id="key_finding-bank" class="word-bank"></div>
-                <div id="implication-bank" class="word-bank"></div>
+                <div id="modality-bank" class="word-bank active"></div>
+                <div id="key_finding_or_action-bank" class="word-bank"></div>
+                <div id="clinical_use-bank" class="word-bank"></div>
             </div>
             <div class="cards-container" id="cards-container"></div>
         </div>
@@ -159,39 +159,39 @@
         </div>
     </div>
     <script>
-        const categoryKeys = ["purpose", "key_finding", "implication"];
-        const categoryLabels = {"purpose": "Purpose", "key_finding": "Key Finding", "implication": "Implication"};
+        const categoryKeys = ["modality", "key_finding_or_action", "clinical_use"];
+        const categoryLabels = {"modality": "Modality", "key_finding_or_action": "Key Finding or Action", "clinical_use": "Clinical Use"};
 
         const gameData = {
-            "Urine Dipstick": {
-                "purpose": "Initial screen for blood in urine",
-                "key_finding": "More than 90% sensitive for hematuria",
-                "implication": "Positive result prompts urine microscopy follow-up"
+            "Urinalysis": {
+                "modality": "Urine sample examined for cells, casts, and protein content in the laboratory",
+                "key_finding_or_action": "Red blood cells, dysmorphic RBCs, red cell casts, and varied amounts of protein",
+                "clinical_use": "Demonstrates signs of glomerular disease supporting diagnosis of anti-GBM involvement"
             },
-            "Urine Microscopy": {
-                "purpose": "Confirm hematuria and identify source",
-                "key_finding": "Dysmorphic RBCs, RBC casts, pyuria, or crystals",
-                "implication": "Dysmorphic RBCs and casts suggest glomerular disease"
+            "Serum Studies": {
+                "modality": "Blood tests including ELISA for anti-GBM autoantibodies and ANCA panel screening",
+                "key_finding_or_action": "Increases in blood urea nitrogen and creatinine levels resulting from decreased GFR",
+                "clinical_use": "ELISA is both sensitive and specific and ANCA helps rule out granulomatosis"
             },
-            "Serum Creatinine and eGFR": {
-                "purpose": "Assess overall kidney function",
-                "key_finding": "Elevated creatinine with decreased eGFR",
-                "implication": "Suggests intrarenal disease or bilateral urinary obstruction"
+            "Renal Biopsy": {
+                "modality": "Kidney tissue sample examined with light microscopy and immunofluorescence staining techniques",
+                "key_finding_or_action": "Linear pattern of IgG deposition along basement membrane on immunofluorescence staining",
+                "clinical_use": "Required for diagnosis because linear IgG deposition is hallmark feature of anti-GBM"
             },
-            "Renal Ultrasound or CT": {
-                "purpose": "Image kidneys for structural causes",
-                "key_finding": "Detects stones, cysts, renal tumors, or trauma",
-                "implication": "CT preferred for stones and trauma; US safer in pregnancy"
+            "Imaging": {
+                "modality": "Chest x-ray and computed tomography scanning of the chest in suspected pulmonary cases",
+                "key_finding_or_action": "Patchy or diffuse opacities on x-ray, ground-glass opacities or consolidations on CT",
+                "clinical_use": "Demonstrates pulmonary hemorrhage and supports clinical diagnosis of alveolar involvement"
             },
-            "Cystoscopy": {
-                "purpose": "Direct bladder visualization by urologists",
-                "key_finding": "Identifies bladder lesions or transitional cell cancer",
-                "implication": "Used when imaging negative and smoker risk present"
+            "Plasmapheresis": {
+                "modality": "Plasma exchange technique separating blood components and replacing plasma with albumin",
+                "key_finding_or_action": "Performed 5 to 7 times per week for 2 to 3 weeks of treatment",
+                "clinical_use": "Removes autoantibody-filled plasma from patient blood reducing harmful circulating anti-GBM antibodies"
             },
-            "Kidney Biopsy": {
-                "purpose": "Tissue diagnosis of suspected glomerular disease",
-                "key_finding": "Confirms specific glomerulonephritis pathology",
-                "implication": "Done when GFR declining and glomerular suspicion high"
+            "Immunosuppressants": {
+                "modality": "Standard therapy using intravenous glucocorticoids along with cyclophosphamide alkylating agent drug",
+                "key_finding_or_action": "Methylprednisolone given with cyclophosphamide and anti-GBM titers follow course of therapy",
+                "clinical_use": "Suppresses autoimmune response and used alongside plasmapheresis for treatment of disease"
             }
         };
 
