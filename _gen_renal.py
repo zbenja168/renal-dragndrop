@@ -38,14 +38,21 @@ ICONS = ["🫘", "💧", "🧬", "⚗️", "🔬", "🧪", "💊", "🩺"]
 
 
 def load_bricks():
-    """Import all brick_NN.py files in number order."""
+    """Import all brick_NN.py files in number order, then the cross-brick synthesis at the end."""
     bricks = []
-    for i in range(1, 56):
+    for i in range(1, 66):
         path = os.path.join(DATA_DIR, f"brick_{i:02d}.py")
         if not os.path.exists(path):
             print(f"  WARNING: missing {path}")
             continue
         spec = importlib.util.spec_from_file_location(f"brick_{i:02d}", path)
+        mod = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(mod)
+        bricks.append(mod.BRICK)
+    # Cross-brick synthesis brick (brick_99) appended last
+    xb_path = os.path.join(DATA_DIR, "brick_99.py")
+    if os.path.exists(xb_path):
+        spec = importlib.util.spec_from_file_location("brick_99", xb_path)
         mod = importlib.util.module_from_spec(spec)
         spec.loader.exec_module(mod)
         bricks.append(mod.BRICK)

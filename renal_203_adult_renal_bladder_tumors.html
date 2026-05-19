@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lab Diagnosis and Treatment - Drag &amp; Drop Study Game</title>
+    <title>Adult Renal and Bladder Tumors Compared - Drag &amp; Drop Study Game</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
@@ -117,11 +117,11 @@
 </head>
 <body>
 <a href="renal_index.html" style="position:fixed;top:12px;left:12px;z-index:9999;background:rgba(0,0,0,0.55);color:#94a3b8;border:1px solid rgba(255,255,255,0.13);border-radius:20px;padding:5px 13px;font-size:.72rem;text-decoration:none;font-family:'Segoe UI',sans-serif;backdrop-filter:blur(8px);transition:.15s;letter-spacing:.3px;" onmouseover="this.style.color='#f1f5f9';this.style.borderColor='rgba(255,255,255,0.3)'" onmouseout="this.style.color='#94a3b8';this.style.borderColor='rgba(255,255,255,0.13)'">&#8592; Index</a>
-<div style="position:fixed;top:12px;right:12px;z-index:9999;display:flex;gap:8px;"><a href="renal_170_clinical_phases_schistosomiasis.html" style="background:rgba(0,0,0,0.72);color:#e2e8f0;border:1px solid rgba(255,255,255,0.22);border-radius:22px;padding:8px 18px;font-size:.85rem;font-weight:600;text-decoration:none;font-family:'Segoe UI',sans-serif;backdrop-filter:blur(10px);transition:.15s;display:inline-flex;align-items:center;gap:6px;" onmouseover="this.style.color='#fff';this.style.borderColor='rgba(255,255,255,0.5)';this.style.background='rgba(0,0,0,0.88)'" onmouseout="this.style.color='#e2e8f0';this.style.borderColor='rgba(255,255,255,0.22)';this.style.background='rgba(0,0,0,0.72)'">&#8592; Prev</a><a href="renal_172_urinary_wall_three_layers.html" style="background:rgba(0,0,0,0.72);color:#e2e8f0;border:1px solid rgba(255,255,255,0.22);border-radius:22px;padding:8px 18px;font-size:.85rem;font-weight:600;text-decoration:none;font-family:'Segoe UI',sans-serif;backdrop-filter:blur(10px);transition:.15s;display:inline-flex;align-items:center;gap:6px;" onmouseover="this.style.color='#fff';this.style.borderColor='rgba(255,255,255,0.5)';this.style.background='rgba(0,0,0,0.88)'" onmouseout="this.style.color='#e2e8f0';this.style.borderColor='rgba(255,255,255,0.22)';this.style.background='rgba(0,0,0,0.72)'">Next &#8594;</a></div>
+<div style="position:fixed;top:12px;right:12px;z-index:9999;display:flex;gap:8px;"><a href="renal_202_pediatric_renal_conditions.html" style="background:rgba(0,0,0,0.72);color:#e2e8f0;border:1px solid rgba(255,255,255,0.22);border-radius:22px;padding:8px 18px;font-size:.85rem;font-weight:600;text-decoration:none;font-family:'Segoe UI',sans-serif;backdrop-filter:blur(10px);transition:.15s;display:inline-flex;align-items:center;gap:6px;" onmouseover="this.style.color='#fff';this.style.borderColor='rgba(255,255,255,0.5)';this.style.background='rgba(0,0,0,0.88)'" onmouseout="this.style.color='#e2e8f0';this.style.borderColor='rgba(255,255,255,0.22)';this.style.background='rgba(0,0,0,0.72)'">&#8592; Prev</a><a href="renal_204_hematuria_differential.html" style="background:rgba(0,0,0,0.72);color:#e2e8f0;border:1px solid rgba(255,255,255,0.22);border-radius:22px;padding:8px 18px;font-size:.85rem;font-weight:600;text-decoration:none;font-family:'Segoe UI',sans-serif;backdrop-filter:blur(10px);transition:.15s;display:inline-flex;align-items:center;gap:6px;" onmouseover="this.style.color='#fff';this.style.borderColor='rgba(255,255,255,0.5)';this.style.background='rgba(0,0,0,0.88)'" onmouseout="this.style.color='#e2e8f0';this.style.borderColor='rgba(255,255,255,0.22)';this.style.background='rgba(0,0,0,0.72)'">Next &#8594;</a></div>
 
     <div class="container">
-        <h1>🧬 Lab Diagnosis and Treatment</h1>
-        <p class="subtitle">Match each diagnostic or therapeutic element to its specimen, finding, and clinical note.</p>
+        <h1>🧬 Adult Renal and Bladder Tumors Compared</h1>
+        <p class="subtitle">Match each adult tumor to its cell of origin, classic risk factor, and first-line management.</p>
         <div class="stats-controls">
             <div class="stats">
                 <div class="stat-item"><span class="stat-label">Score:</span><span id="score">0</span>/<span id="total">0</span></div>
@@ -138,13 +138,13 @@
             <div class="word-bank-container">
                 <div class="word-bank-title">&#x1F4DA; Word Bank</div>
                 <div class="tabs">
-                    <button class="tab active" onclick="switchTab('specimen_or_source', this)">Specimen or Source</button>
-                    <button class="tab" onclick="switchTab('diagnostic_finding', this)">Diagnostic Finding</button>
-                    <button class="tab" onclick="switchTab('clinical_note', this)">Clinical Note</button>
+                    <button class="tab active" onclick="switchTab('cell_of_origin', this)">Cell of Origin</button>
+                    <button class="tab" onclick="switchTab('classic_risk_factor', this)">Classic Risk Factor</button>
+                    <button class="tab" onclick="switchTab('first_line_management', this)">First-Line Management</button>
                 </div>
-                <div id="specimen_or_source-bank" class="word-bank active"></div>
-                <div id="diagnostic_finding-bank" class="word-bank"></div>
-                <div id="clinical_note-bank" class="word-bank"></div>
+                <div id="cell_of_origin-bank" class="word-bank active"></div>
+                <div id="classic_risk_factor-bank" class="word-bank"></div>
+                <div id="first_line_management-bank" class="word-bank"></div>
             </div>
             <div class="cards-container" id="cards-container"></div>
         </div>
@@ -159,34 +159,39 @@
         </div>
     </div>
     <script>
-        const categoryKeys = ["specimen_or_source", "diagnostic_finding", "clinical_note"];
-        const categoryLabels = {"specimen_or_source": "Specimen or Source", "diagnostic_finding": "Diagnostic Finding", "clinical_note": "Clinical Note"};
+        const categoryKeys = ["cell_of_origin", "classic_risk_factor", "first_line_management"];
+        const categoryLabels = {"cell_of_origin": "Cell of Origin", "classic_risk_factor": "Classic Risk Factor", "first_line_management": "First-Line Management"};
 
         const gameData = {
-            "S. mansoni egg": {
-                "specimen_or_source": "Stool microscopy preferred when intestinal mansoni infection is clinically suspected",
-                "diagnostic_finding": "Oval-shaped egg with a large lateral spine protruding from the side",
-                "clinical_note": "Identifies adults reproducing in inferior mesenteric venules of large intestine"
+            "Clear Cell RCC (Brick 61)": {
+                "cell_of_origin": "Proximal renal tubule epithelium with abundant cytoplasmic glycogen and lipid",
+                "classic_risk_factor": "Tobacco smoking, obesity, and VHL gene loss on chromosome 3p",
+                "first_line_management": "Partial or radical nephrectomy for localized disease; TKIs for advanced disease"
             },
-            "S. haematobium egg": {
-                "specimen_or_source": "Urine microscopy ideally collected midday when egg shedding peaks",
-                "diagnostic_finding": "Oval egg with a prominent terminal spine at one end",
-                "clinical_note": "Found in bladder venous plexus; associated with hematuria and bladder cancer"
+            "Papillary RCC (Brick 61)": {
+                "cell_of_origin": "Renal tubular epithelium forming papillary cores with fibrovascular stalks",
+                "classic_risk_factor": "Familial MET oncogene mutations or trisomy 7 and 17 chromosomally",
+                "first_line_management": "Surgical resection by partial or radical nephrectomy when localized"
             },
-            "S. japonicum egg": {
-                "specimen_or_source": "Stool microscopy when Asian endemic exposure is reported by patient",
-                "diagnostic_finding": "Round egg that may have a small lateral knob present",
-                "clinical_note": "Adults inhabit superior mesenteric venules; causes severe hepatosplenic disease"
+            "Renal Oncocytoma (Brick 62)": {
+                "cell_of_origin": "Large eosinophilic cells of renal collecting duct with abundant mitochondria",
+                "classic_risk_factor": "Sporadic in adults aged 50 to 80, with 2 to 1 male predominance",
+                "first_line_management": "Resect to exclude RCC because imaging cannot reliably distinguish them"
             },
-            "Eosinophilia": {
-                "specimen_or_source": "Peripheral blood complete count drawn during evaluation of suspected infection",
-                "diagnostic_finding": "Elevated eosinophil count reflecting parasitic helminth immune response activation",
-                "clinical_note": "Common in acute Katayama fever and chronic schistosomiasis but nonspecific finding"
+            "Renal Angiomyolipoma (Brick 62)": {
+                "cell_of_origin": "Perivascular epithelioid cells forming blood vessels, smooth muscle, and fat",
+                "classic_risk_factor": "Tuberous sclerosis complex with TSC1 or TSC2 tumor suppressor mutations",
+                "first_line_management": "Observe small AMLs; embolize or resect larger lesions to prevent hemorrhage"
             },
-            "Praziquantel therapy": {
-                "specimen_or_source": "Oral medication given as first-line for all Schistosoma species infections",
-                "diagnostic_finding": "Not diagnostic; increases membrane calcium permeability causing worm paralysis and tegument damage",
-                "clinical_note": "Repeat dosing if recent infection; corticosteroids added for Katayama fever inflammation"
+            "Bladder UCC (Brick 63)": {
+                "cell_of_origin": "Urothelial epithelium lining renal pelvis through urethra with bladder predominance",
+                "classic_risk_factor": "Tobacco smoking, arylamine dyes, cyclophosphamide, and pelvic radiation exposure",
+                "first_line_management": "Transurethral resection plus intravesical BCG; cystectomy for muscle-invasive disease"
+            },
+            "Bladder Squamous Cell Carcinoma (Brick 63)": {
+                "cell_of_origin": "Squamous metaplasia of urothelium driven by chronic inflammation",
+                "classic_risk_factor": "Schistosoma haematobium infection endemic in Africa and Middle East",
+                "first_line_management": "Radical cystectomy because most present with muscle-invasive disease"
             }
         };
 
