@@ -161,34 +161,30 @@
         </div>
     </div>
     <script>
-        const categoryKeys = ["osmolality", "tonicity", "both"];
-        const categoryLabels = {"osmolality": "Osmolality", "tonicity": "Tonicity", "both": "Both"};
+        const categoryKeys = ["definition", "calculation_formula", "includes_urea", "effect_on_cell_volume", "clinical_use"];
+        const categoryLabels = {"definition": "Definition", "calculation_formula": "Calculation Formula", "includes_urea": "Includes Urea", "effect_on_cell_volume": "Effect on Cell Volume", "clinical_use": "Clinical Use"};
 
         const gameData = {
-            "Definition": {
-                "osmolality": "Total concentration of all osmotically active particles",
-                "tonicity": "Concentration of solutes that cannot cross membranes",
-                "both": "Measures of solute load affecting fluid balance"
+            "Osmolality": {
+                "definition": "Total concentration of all osmotically active particles",
+                "calculation_formula": "2x[Na+] + [Glucose]/18 + [BUN]/2.8",
+                "includes_urea": "Yes, urea contributes to total osmolality",
+                "effect_on_cell_volume": "Only changes cell volume if effective osmoles involved",
+                "clinical_use": "Used to calculate the osmolal gap"
             },
-            "Calculation Formula": {
-                "osmolality": "2x[Na+] + [Glucose]/18 + [BUN]/2.8",
-                "tonicity": "2x[Na+] + [Glucose]/18 (no BUN)",
-                "both": "Both rely on sodium as the major contributor"
+            "Tonicity": {
+                "definition": "Concentration of solutes that cannot cross membranes",
+                "calculation_formula": "2x[Na+] + [Glucose]/18 (no BUN)",
+                "includes_urea": "No, urea freely crosses cell membranes",
+                "effect_on_cell_volume": "Always affects cell volume across membranes",
+                "clinical_use": "Predicts water movement across cell membranes"
             },
-            "Includes Urea": {
-                "osmolality": "Yes, urea contributes to total osmolality",
-                "tonicity": "No, urea freely crosses cell membranes",
-                "both": "Differ specifically based on urea inclusion"
-            },
-            "Effect on Cell Volume": {
-                "osmolality": "Only changes cell volume if effective osmoles involved",
-                "tonicity": "Always affects cell volume across membranes",
-                "both": "Predict cellular response to fluid disturbances"
-            },
-            "Clinical Use": {
-                "osmolality": "Used to calculate the osmolal gap",
-                "tonicity": "Predicts water movement across cell membranes",
-                "both": "Guide IV fluid therapy and electrolyte correction"
+            "Both": {
+                "definition": "Measures of solute load affecting fluid balance",
+                "calculation_formula": "Both rely on sodium as the major contributor",
+                "includes_urea": "Differ specifically based on urea inclusion",
+                "effect_on_cell_volume": "Predict cellular response to fluid disturbances",
+                "clinical_use": "Guide IV fluid therapy and electrolyte correction"
             }
         };
 

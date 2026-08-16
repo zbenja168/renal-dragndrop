@@ -161,34 +161,30 @@
         </div>
     </div>
     <script>
-        const categoryKeys = ["cystitis", "pyelonephritis", "both_conditions"];
-        const categoryLabels = {"cystitis": "Cystitis", "pyelonephritis": "Pyelonephritis", "both_conditions": "Both Conditions"};
+        const categoryKeys = ["vital_signs", "core_symptoms", "systemic_features", "anatomic_site", "severity"];
+        const categoryLabels = {"vital_signs": "Vital Signs", "core_symptoms": "Core Symptoms", "systemic_features": "Systemic Features", "anatomic_site": "Anatomic Site", "severity": "Severity"};
 
         const gameData = {
-            "Vital Signs": {
-                "cystitis": "Afebrile patient with normal vital signs and stable hemodynamics",
-                "pyelonephritis": "Fever present, occasional hypotension if sepsis develops",
-                "both_conditions": "Vital signs help distinguish severity and need for hospitalization"
+            "Cystitis": {
+                "vital_signs": "Afebrile patient with normal vital signs and stable hemodynamics",
+                "core_symptoms": "Dysuria, urinary frequency, urgency, suprapubic pain, possible gross hematuria",
+                "systemic_features": "Fever is not usually present and patients appear well",
+                "anatomic_site": "Infection of the bladder, part of lower urinary tract",
+                "severity": "Patients usually stable and respond easily to outpatient therapy"
             },
-            "Core Symptoms": {
-                "cystitis": "Dysuria, urinary frequency, urgency, suprapubic pain, possible gross hematuria",
-                "pyelonephritis": "Cystitis symptoms plus flank pain and costovertebral angle tenderness",
-                "both_conditions": "Painful urination and altered urinary habits are common complaints"
+            "Pyelonephritis": {
+                "vital_signs": "Fever present, occasional hypotension if sepsis develops",
+                "core_symptoms": "Cystitis symptoms plus flank pain and costovertebral angle tenderness",
+                "systemic_features": "Chills, nausea, vomiting; elderly may show confusion or personality changes",
+                "anatomic_site": "Infection of the kidneys, part of upper urinary tract",
+                "severity": "More serious infection often developing high-grade fever with chills"
             },
-            "Systemic Features": {
-                "cystitis": "Fever is not usually present and patients appear well",
-                "pyelonephritis": "Chills, nausea, vomiting; elderly may show confusion or personality changes",
-                "both_conditions": "Recurrent infections may indicate complicated underlying disease process"
-            },
-            "Anatomic Site": {
-                "cystitis": "Infection of the bladder, part of lower urinary tract",
-                "pyelonephritis": "Infection of the kidneys, part of upper urinary tract",
-                "both_conditions": "Can occur independently or together in the same patient"
-            },
-            "Severity": {
-                "cystitis": "Patients usually stable and respond easily to outpatient therapy",
-                "pyelonephritis": "More serious infection often developing high-grade fever with chills",
-                "both_conditions": "Severity guides whether oral or intravenous antibiotics are required"
+            "Both Conditions": {
+                "vital_signs": "Vital signs help distinguish severity and need for hospitalization",
+                "core_symptoms": "Painful urination and altered urinary habits are common complaints",
+                "systemic_features": "Recurrent infections may indicate complicated underlying disease process",
+                "anatomic_site": "Can occur independently or together in the same patient",
+                "severity": "Severity guides whether oral or intravenous antibiotics are required"
             }
         };
 
