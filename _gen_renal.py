@@ -716,7 +716,7 @@ def main():
     <a href="resp_index.html" style="text-decoration:none;"><span class="pill" style="border-color:rgba(20,184,166,0.4);cursor:pointer;transition:.15s;" onmouseover="this.style.background='rgba(20,184,166,0.15)';this.style.borderColor='#14b8a6'" onmouseout="this.style.background='rgba(255,255,255,.05)';this.style.borderColor='rgba(20,184,166,0.4)'">&#x1FAC1; <b style="color:#14b8a6">RespiStudy</b></span></a>
   </div>
   <div class="search-wrap">
-    <input type="text" id="search" placeholder="Search by topic or number\\u2026" autocomplete="off">
+    <input type="text" id="search" placeholder="Search by topic or number&hellip;" autocomplete="off">
     <span class="search-ico">&#x2315;</span>
   </div>
 </header>
